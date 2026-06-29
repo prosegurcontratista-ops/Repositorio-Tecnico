@@ -118,30 +118,9 @@ body{
 </style>
 
   <!-- ====== PWA ====== -->
-  <link rel="manifest" id="pwa-manifest">
+  <link rel="manifest" href="manifest.json">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <script>
-  (function(){
-    var manifest = {
-      name: "Repositorio Técnico · Prosegur",
-      short_name: "Repo Técnico",
-      description: "Repositorio de recursos técnicos Prosegur",
-      start_url: "./",
-      display: "standalone",
-      background_color: "#FFD633",
-      theme_color: "#050505",
-      orientation: "portrait-primary",
-      lang: "es",
-      icons: [
-        { src: "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 192 192'%3E%3Crect width='192' height='192' fill='%23FFD633'/%3E%3Ctext y='.9em' font-size='140' x='20'%3E%F0%9F%93%81%3C/text%3E%3C/svg%3E", sizes: "192x192", type: "image/svg+xml", purpose: "any maskable" },
-        { src: "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512'%3E%3Crect width='512' height='512' fill='%23FFD633'/%3E%3Ctext y='.9em' font-size='370' x='55'%3E%F0%9F%93%81%3C/text%3E%3C/svg%3E", sizes: "512x512", type: "image/svg+xml", purpose: "any maskable" }
-      ]
-    };
-    try {
-      var blob = new Blob([JSON.stringify(manifest)], {type:"application/json"});
-      document.getElementById("pwa-manifest").href = URL.createObjectURL(blob);
-    } catch(e){}
-  })();
 
   if("serviceWorker" in navigator){
     var swCode = [
